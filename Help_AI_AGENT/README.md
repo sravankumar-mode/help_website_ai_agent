@@ -11,12 +11,17 @@ This project is an AI-powered Q&A agent that scrapes content from a given URL, s
 ## Setup Instructions
 
 1. **Clone the repository**:
+   ```bash
    git clone https://github.com/sravankumar-mode/help_website_ai_agent.git
 
 2. **Create a virtual environment** (optional but recommended):
-   python -m venv venv source venv/bin/activate # On Windows use venv\Scripts\activate
+   ```bash
+   python -m venv venv source venv/bin/activate
+   ```
+   # On Windows use venv\Scripts\activate
 
 3. **Install dependencies**:
+   ```bash
    pip install -r requirements.txt
 
 4. **Set up environment variables**:
@@ -36,30 +41,32 @@ This project is an AI-powered Q&A agent that scrapes content from a given URL, s
 - `os` for handling environment variables and file paths.
 
 To install dependencies, use the following command:
-pip install -r requirements.txt
-
+   ```bash
+   pip install -r requirements.txt
+   ```
 ---
 
 ## Usage Examples
 
 1. **Scrape content from a URL and start the Q&A session**:
    Run the main script with the `--url` argument pointing to the target URL to scrape:
-
-Example: 
-python main.py --url "https://example.com"
+   ```bash
+   python main.py --url "https://example.com"
 
 2. **Interact with the AI agent**:
 After running the script, you can ask the AI agent questions based on the scraped content:
 
-Example: 
-Ask a question: What is the main topic of the page?
-
+Example: Ask a question: 
+   ```bash
+    What is the main topic of the page?
+   ```
 4. **Exit the session**:
 Type `exit` to stop the program:
 
-Example: 
-Ask a question: exit
-
+Example: Ask a question: 
+   ```bash
+      exit
+   ```
 ---
 
 ## Design Decisions
