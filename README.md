@@ -11,11 +11,17 @@ This project is an AI-powered Q&A agent that scrapes content from a given URL, s
 ## Setup Instructions
 
 1. **Clone the repository**:
-2. **Create a virtual environment** (optional but recommended):
-3. **Install dependencies**:
-4. **Set up environment variables**:
-Make sure to set up any required environment variables (e.g., API keys, configuration values).
+   git clone https://github.com/sravankumar-mode/help_website_ai_agent.git
 
+2. **Create a virtual environment** (optional but recommended):
+   python -m venv venv source venv/bin/activate # On Windows use venv\Scripts\activate
+
+3. **Install dependencies**:
+   pip install -r requirements.txt
+
+4. **Set up environment variables**:
+   Make sure to set up the required environment variables, including the API key and the model name.
+   Get your GEMINI API KEY [HERE](https://aistudio.google.com/app/apikey?_gl=1*1x804wt*_ga*MTIyNzg2MjE2NS4xNzI4NDQ4MDU3*_ga_P1DBVKWT6V*MTczNDc4NjA3Ny4xMC4xLjE3MzQ3ODYwODQuNTMuMC4xMjkzMjA1OTgw): 
 
 ---
 
@@ -31,7 +37,6 @@ Make sure to set up any required environment variables (e.g., API keys, configur
 
 To install dependencies, use the following command:
 pip install -r requirements.txt
-
 
 ---
 
@@ -54,7 +59,6 @@ Type `exit` to stop the program:
 
 Example: 
 Ask a question: exit
-
 
 ---
 
@@ -84,16 +88,31 @@ Ask a question: exit
 
 ---
 
+## Code Files
+
+### `config.py`
+Contains configuration settings, including environment variables and API keys. This file is responsible for setting up the necessary configurations for the application.
+
+### `prompt.py`
+Generates the instructions and format for the AI agent's responses. This file contains the logic to structure the agent's responses based on the scraped content.
+
+### `validate_url.py`
+Validates whether a given URL is reachable and responds without errors. It uses `requests.head` to check the URL's status before attempting to scrape the content.
+
+### `scrape_code.py`
+Handles the actual web scraping process using Selenium and BeautifulSoup. This file scrapes URLs and content from a web page and stores the extracted data in a structured format.
+
+### `GEMINI_test.py`
+This file tests the Gemini API integration by sending requests to the API and receiving responses. It is used for evaluating the AI agent's ability to generate answers based on the scraped content.
+
+### `main.py`
+The main entry point of the application, which controls the flow of the script. It accepts user input, scrapes content from the URL, and initiates the AI-powered Q&A agent to answer user queries.
+
+---
+
 ## Contribution
 
 Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
 
 ---
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
-
 
